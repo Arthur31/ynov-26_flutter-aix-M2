@@ -18,16 +18,14 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: Center(
-          child: RepaintBoundary(
-            child: Consumer(
-              builder: (context, ref, child) {
-                int count = ref.watch(counterNotifierProvider);
-                return Text(
-                  count.toString(),
-                  style: Theme.of(context).textTheme.headlineMedium,
-                );
-              },
-            ),
+          child: Consumer(
+            builder: (context, ref, child) {
+              int count = ref.watch(counterNotifierProvider);
+              return Text(
+                count.toString(),
+                style: Theme.of(context).textTheme.headlineMedium,
+              );
+            },
           ),
         ),
         appBar: AppBar(
@@ -44,7 +42,7 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        floatingActionButton: RepaintBoundary(child: FABs()),
+        floatingActionButton: FABs(),
       ),
     );
   }
