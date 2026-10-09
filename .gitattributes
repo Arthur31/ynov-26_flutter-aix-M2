@@ -1,0 +1,3 @@
+*.png linguist-generated=true
+*.g.dart linguist-generated=true
+pubspec.lock linguist-generated=true
